@@ -1,34 +1,22 @@
 import React, { Component } from 'react';
 import { IconContext } from "react-icons";
-import { FaHome } from 'react-icons/fa';
-import { FaFlag } from 'react-icons/fa';
-import { FaUser } from 'react-icons/fa';
-import { FaRegChartBar } from 'react-icons/fa';
+import { FaHome, FaFlag, FaUser, FaRegChartBar } from 'react-icons/fa';
 
 class Nav extends Component {
   render() {
+  	const items = [<FaHome />, <FaFlag />, <FaRegChartBar />, <FaUser />];
+
     return (
       <div className="Nav">
-      	<IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
-		  <div>
-		    <FaHome />
-		  </div>
-		</IconContext.Provider>
-		<IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
-		  <div>
-		    <FaFlag />
-		  </div>
-		</IconContext.Provider>
-		<IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
-		  <div>
-		    <FaRegChartBar />
-		  </div>
-		</IconContext.Provider>
-        <IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
-		  <div>
-		    <FaUser />
-		  </div>
-		</IconContext.Provider>
+      	<div className="items-container">
+	      	{
+	      		items.map(function(item, index) {
+	      			return <IconContext.Provider value={{ className: "nav-icon" }} key={index}>
+							  {item}
+							</IconContext.Provider>
+	      		})
+	      	}
+      	</div>
       </div>
     );
   }

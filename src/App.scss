@@ -1,0 +1,128 @@
+.App {
+  font-family: "Helvetica Neue";
+  font-size: 100%;
+  height: 100%;
+  text-align: left;
+  width: 100%;
+}
+
+.App-header {
+  color: #7F8C8D;
+  font-size: 2em;
+  font-weight: bold;
+  margin: .5em .5em;
+}
+
+.Nav {
+  background-color: #ECF0F1;
+  bottom: 0;
+  padding: .8em 0;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-icon {
+  font-size: 1.5em;
+  color: #707070;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.add-button {
+  bottom: 5.5em;
+  right: 2em;
+  position: fixed;
+  text-align: center;
+  height: 2em;
+  width: 2em;
+  vertical-align: middle;
+}
+
+.missions-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0 0 1em .9em;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.missions-container::-webkit-scrollbar {
+  display: none; }
+
+.mission {
+  background: #2ECC71;
+  border-radius: .5em;
+  color: white;
+  font-size: 1.2em;
+  padding: .3em 1em;
+  margin: 0 .8em 0 0;
+  min-width: 5em;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.missions-container::after {
+  content: "";
+  flex: 0 0 1em;
+}
+
+.green {
+  background-color: #2ECC71;
+}
+
+.yellow {
+  background-color: #F1C40F;
+}
+
+.purple {
+  background-color: #8E44AD;
+}
+
+.light-grey {
+  background-color: #ECF0F1;
+  color: #7F8C8D;
+}
+
+.tasks {
+  color: #7F8C8D;
+  padding: 1.2em 0;
+
+  .subtitle {
+    color: inherit;
+    font-weight: bold;
+    padding: 1em 1em 0;
+  }
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 1em 1em;
+  border-bottom: 1px solid #DDDDDD;
+
+  .marker {
+    min-width: 1em;
+    height: .2em;
+    border-radius: .5em;
+  }
+
+  .description {
+    padding-left: .5em;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
