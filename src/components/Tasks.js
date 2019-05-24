@@ -3,19 +3,6 @@ import { connect } from 'react-redux'
 
 import Task from './Task.js';
 
-// const Tasks = ({ tasks, missions }) => (
-//   <div className="tasks">
-//     <div className="general">
-//       <div className="subtitle">All tasks</div>
-//       {tasks.map((task, index) =>
-//         <Task task={task} mission={missions[task.mission_id]} key={index}/>
-//       )}
-//     </div>
-
-//     <AddTask />
-//   </div>
-// )
-
 class Tasks extends Component {
   render() {
     const {tasks, missions} = this.props;

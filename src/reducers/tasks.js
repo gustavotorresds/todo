@@ -17,11 +17,23 @@ const tasks = (state = [
         }
       ]
     case 'UPDATE_TASK':
-      return update(state, { 
-        [action.task_id]: {
-          description: {$set: action.description}
-        }
-      });
+      // return update(state, { 
+      //   [action.task_id]: {
+      //     description: {$set: action.description}
+      //   }
+      // });
+      return state.map(
+        (task, i) => task.id === action.task_id ?
+          {...task, description: action.description} :
+          task
+        )
+    case 'DELETE_TASK':
+      let deleteTaskIndex = state.findIndex((task) => task.id === action.task_id);
+      console.log(deleteTaskIndex);
+      return [
+        ...state.slice(0, deleteTaskIndex),
+        ...state.slice(deleteTaskIndex + 1)
+      ]
     default:
       return state
   }

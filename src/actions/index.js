@@ -19,3 +19,8 @@ export const updateTask = (taskId, newDescription) => ({
 	task_id: taskId,
 	description: newDescription
 })
+
+export const deleteTask = taskId => ({
+  type: 'DELETE_TASK',
+  task_id: taskId
+})
