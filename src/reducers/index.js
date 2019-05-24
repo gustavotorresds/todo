@@ -1,6 +1,8 @@
-import {combineReducers} from 'redux';
-import data from './data';
+import { combineReducers } from 'redux'
+import missions from './missions'
+import tasks from './tasks'
 
 export default combineReducers({
-  data
-});
+  missions,
+  tasks
+})

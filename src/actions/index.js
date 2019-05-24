@@ -1,26 +1,20 @@
-export const FETCH_TODOS = "FETCH_TODOS";
+let nextMissionId = 0
 
-// export const addToDo = newToDo => async dispatch => {
-//   todosRef.push().set(newToDo);
-// };
-// 
-// export const completeToDo = completeToDo => async dispatch => {
-//   todosRef.child(completeToDo).remove();
-// };
-// 
-// export const fetchToDos = () => async dispatch => {
-//   todosRef.on("value", snapshot => {
-//     dispatch({
-//       type: FETCH_TODOS,
-//       payload: snapshot.val()
-//     });
-//   });
-// };
+export const addMission = text => ({
+  type: 'ADD_MISSION',
+  id: nextMissionId++,
+  text
+})
 
-// TODO: this is potentially wrong.
-export const fetchToDos = () => async dispatch => {
-	dispatch({
-	  type: FETCH_TODOS,
-	  payload: ["T1", "T2"]
-	});
-};
+let nextTaskId
+export const addTask = text => ({
+  type: 'ADD_TASK',
+  mission_id: 1,
+  description: text
+})
+
+export const updateTask = (taskId, newDescription) => ({
+	type: 'UPDATE_TASK',
+	task_id: taskId,
+	description: newDescription
+})

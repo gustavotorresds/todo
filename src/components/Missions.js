@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class Missions extends Component {
-  render() {
-    const missionTags = [
-      {name: 'Edu', color: 'green'},
-      {name: 'Mis', color: 'yellow'},
-      {name: 'Hea', color: 'purple'}
-    ];
+  state = {
+    missions: [],
+  };
 
-    const missionElements = missionTags.map((mission, index) =>
+  render() {
+    const { missions } = this.props;
+
+    const missionElements = missions.map((mission, index) =>
       <div className={'mission ' + mission.color} key={index}>
-          {mission.name}
+        {mission.name}
       </div>
     );
 
@@ -26,4 +27,10 @@ class Missions extends Component {
   }
 }
 
-export default Missions;
+const mapStateToProps = state => ({
+  missions: state.missions
+})
+
+export default connect(
+  mapStateToProps
+)(Missions)

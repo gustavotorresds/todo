@@ -104,7 +104,7 @@
 .task {
   display: flex;
   align-items: center;
-  padding: 1em 1em;
+  padding: 0 1em;
   border-bottom: 1px solid #DDDDDD;
 
   .marker {
@@ -114,7 +114,12 @@
   }
 
   .description {
+    padding: 1em 0;
     padding-left: .5em;
+    width: 100%;
+    font-family: "Helvetica Neue";
+    font-size: 12pt;
+    color: #7F8C8D;
   }
 }
 
