@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import Task from './Task.js';
-import AddTask from './AddTask.js';
 
 // const Tasks = ({ tasks, missions }) => (
 //   <div className="tasks">
@@ -36,8 +35,6 @@ class Tasks extends Component {
           <div className="subtitle">All tasks</div>
           {allElements}
         </div>
-
-        <AddTask />
       </div>
     );
   }

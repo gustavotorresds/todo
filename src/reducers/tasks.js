@@ -11,6 +11,7 @@ const tasks = (state = [
       return [
         ...state,
         {
+          id: action.id,
           mission_id: action.mission_id,
           description: action.description
         }

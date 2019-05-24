@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateTask } from '../actions'
+import { updateTask } from '../actions';
 
 class Task extends Component {
   handleChange(event) {
     const task = this.props.task;
     const newDescription = event.target.value;
-    
+
     this.props.dispatch(updateTask(task.id, newDescription));
   }
 
@@ -17,7 +17,11 @@ class Task extends Component {
     return (
       <form className="task">
         <div className={'marker ' + mission.color}></div>
-        <input className="description" value={task.description} onChange={(event) => this.handleChange(event)} />
+        <input
+          className="description"
+          value={task.description}
+          onChange={(event) => this.handleChange(event)}
+        />
       </form>
     );
   }

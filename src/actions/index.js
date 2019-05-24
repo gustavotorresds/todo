@@ -6,9 +6,10 @@ export const addMission = text => ({
   text
 })
 
-let nextTaskId
+let nextTaskId = 4
 export const addTask = text => ({
   type: 'ADD_TASK',
+  id: nextTaskId++,
   mission_id: 1,
   description: text
 })
