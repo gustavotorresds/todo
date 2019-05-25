@@ -1,3 +1,7 @@
+body {
+  background-color: #ECF0F1;
+}
+
 .App {
   font-family: "Helvetica Neue";
   font-size: 100%;
@@ -33,8 +37,8 @@
 }
 
 .add-button {
-  bottom: 5.5em;
-  right: 2em;
+  bottom: 2.5em;
+  right: 2.5em;
   position: fixed;
   text-align: center;
   height: 2em;
@@ -101,11 +105,17 @@
   }
 }
 
+.rc-swipeout {
+  margin: 1em;
+  border-radius: .5em;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+}
+
 .task {
   display: flex;
   align-items: center;
   padding-left: 1em;
-  border-bottom: 1px solid #DDDDDD;
+  /*border-bottom: 1px solid #DDDDDD;*/
 
   .marker {
     min-width: 1em;

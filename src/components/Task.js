@@ -22,28 +22,31 @@ class Task extends Component {
     const mission = this.props.mission;
 
     return (
-      <Swipeout
-        right={[
-          {
-            text: 'delete',
-            onPress: () => this.handleRemove(),
-            style: { backgroundColor: 'red', color: 'white' },
-            className: 'custom-class-1'
-          }
-        ]}
-        autoClose={true}
-        onOpen={() => console.log('open')}
-        onClose={() => console.log('close')}
-      >
-        <form className="task">
-          <div className={'marker ' + mission.color}></div>
-          <input
-            className="description"
-            value={task.description}
-            onChange={(event) => this.handleChange(event)}
-          />
-        </form>
-      </Swipeout>
+      
+        <Swipeout
+          right={[
+            {
+              text: 'delete',
+              onPress: () => this.handleRemove(),
+              style: { backgroundColor: 'red', color: 'white' },
+              className: 'custom-class-1'
+            }
+          ]}
+          autoClose={true}
+          onOpen={() => console.log('open')}
+          onClose={() => console.log('close')}
+        >
+          
+          <form className="task">
+            <div className={'marker ' + mission.color}></div>
+            <input
+              className="description"
+              value={task.description}
+              onChange={(event) => this.handleChange(event)}
+            />
+          </form>
+        </Swipeout>
+      
     );
   }
 }

@@ -12,7 +12,6 @@ class Main extends Component {
         <Missions />
         <Tasks />
         <Add />
-        <Nav />
       </main>
     );
   }
