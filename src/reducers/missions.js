@@ -1,7 +1,7 @@
 const missions = (state = [
-      {name: 'Edu', color: 'green'},
-      {name: 'Mis', color: 'yellow'},
-      {name: 'Hea', color: 'purple'}
+      {id: 1, name: 'Edu', color: 'green'},
+      {id: 2, name: 'Mis', color: 'yellow'},
+      {id: 3, name: 'Hea', color: 'purple'}
     ], action) => {
   switch (action.type) {
     case 'ADD_MISSION':

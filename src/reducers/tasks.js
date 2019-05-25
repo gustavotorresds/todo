@@ -1,10 +1,10 @@
-import update from 'react-addons-update';
+// import update from 'react-addons-update';
 
 const tasks = (state = [
-      {id: 0, mission_id: 0, description: 'Some task about education'},
-      {id: 1, mission_id: 1, description: 'Some miscellaneous task'},
-      {id: 2, mission_id: 2, description: 'Some task about health'},
-      {id: 3, mission_id: 2, description: 'Some task about health'}
+      {id: 0, missionId: 1, description: 'Some task about education'},
+      {id: 1, missionId: 2, description: 'Some miscellaneous task'},
+      {id: 2, missionId: 3, description: 'Some task about health'},
+      {id: 3, missionId: 3, description: 'Some task about health'}
     ], action) => {
   switch (action.type) {
     case 'ADD_TASK':
@@ -12,7 +12,7 @@ const tasks = (state = [
         ...state,
         {
           id: action.id,
-          mission_id: action.mission_id,
+          missionId: action.missionId,
           description: action.description
         }
       ]

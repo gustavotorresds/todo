@@ -5,10 +5,17 @@ import Task from './Task.js';
 
 class Tasks extends Component {
   render() {
-    const {tasks, missions} = this.props;
+    let {tasks, missions, missionFilter} = this.props;
+
+    if (missionFilter !== null) {
+      tasks = tasks.filter((task) => task.missionId === missionFilter)
+    }
 
     const allElements = tasks.map((task, index) =>
-      <Task task={task} mission={missions[task.mission_id]} key={index}/>
+      <Task
+        task={task}
+        mission={missions.find((mission) => mission.id === task.missionId)}
+        key={index}/>
     );
 
     return (
@@ -29,7 +36,8 @@ class Tasks extends Component {
 
 const mapStateToProps = state => ({
   tasks: state.tasks,
-  missions: state.missions
+  missions: state.missions,
+  missionFilter: state.missionFilter
 });
 
 export default connect(

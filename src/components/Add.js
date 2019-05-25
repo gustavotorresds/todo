@@ -12,7 +12,9 @@ const redTheme = createMuiTheme({ palette: { primary: red } });
 
 class Add extends Component {
   handleCreate() {
-    this.props.dispatch(addTask(""));
+    const { missionFilter } = this.props;
+    console.log(missionFilter);
+    this.props.dispatch(addTask("", missionFilter ? missionFilter : 2));
   }
 
   render() {
@@ -28,4 +30,8 @@ class Add extends Component {
   }
 }
 
-export default connect()(Add);
+const mapStateToProps = state => ({
+  missionFilter: state.missionFilter
+})
+
+export default connect(mapStateToProps)(Add);

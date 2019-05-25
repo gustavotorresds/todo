@@ -7,10 +7,10 @@ export const addMission = text => ({
 })
 
 let nextTaskId = 4
-export const addTask = text => ({
+export const addTask = (text, missionId) => ({
   type: 'ADD_TASK',
   id: nextTaskId++,
-  mission_id: 1,
+  missionId: missionId,
   description: text
 })
 
@@ -23,4 +23,9 @@ export const updateTask = (taskId, newDescription) => ({
 export const deleteTask = taskId => ({
   type: 'DELETE_TASK',
   task_id: taskId
+})
+
+export const setMissionFilter = missionId => ({
+  type: 'SET_MISSION_FILTER',
+  missionId: missionId
 })
