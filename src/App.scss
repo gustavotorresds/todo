@@ -260,6 +260,11 @@ body {
     font-size: 12pt;
     color: #7F8C8D;
   }
+
+  input, input:focus {
+    border: none;
+    outline: none;
+  }
 }
 
 @keyframes App-logo-spin {

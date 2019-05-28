@@ -20,7 +20,7 @@ class Nav extends Component {
 
   toggleMenu() {
     this.setState({menuOpen: !this.state.menuOpen})
-  } 
+  }
 
   render() {
   	// const items = [<FaHome />, <FaFlag />, <FaRegChartBar />, <FaUser />];
