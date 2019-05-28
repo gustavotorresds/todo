@@ -17,6 +17,10 @@ class Task extends Component {
     this.props.dispatch(deleteTask(task.id));
   }
 
+  handleDone() {
+    console.log('Done')
+  }
+
   render() {
     const task = this.props.task;
     const mission = this.props.mission;
@@ -32,13 +36,28 @@ class Task extends Component {
               className: 'custom-class-1'
             }
           ]}
+          left={[
+            {
+              text: 'done',
+              onPress: () => this.handleDone(),
+              style: { backgroundColor: mission.color, color: 'white' }
+            }
+          ]}
           autoClose={true}
           onOpen={() => console.log('open')}
           onClose={() => console.log('close')}
         >
           
           <form className="task">
-            <div className={'marker ' + mission.color}></div>
+            {/*<div className={'marker ' + mission.color}></div>*/}
+
+            <div className="checkbox-container">
+            <label className="checkbox-label">
+                <input type="checkbox"/>
+                <span className="checkbox-custom rectangular" style={{borderColor: mission.color}}></span>
+            </label>
+            </div>
+
             <input
               className="description"
               value={task.description}

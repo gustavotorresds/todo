@@ -16,9 +16,10 @@ class Missions extends Component {
 
     const missionElements = missions.map((mission, index) =>
       <div
-        className={'mission ' + mission.color}
+        className={'mission'}
         key={index}
         onClick={() => this.handleClick(mission.id)}
+        style={{backgroundColor: mission.color}}
       >
         {mission.name}
       </div>
