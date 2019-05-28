@@ -1,10 +1,10 @@
 // import update from 'react-addons-update';
 
 const tasks = (state = [
-      {id: 0, missionId: 1, description: 'Some task about education'},
-      {id: 1, missionId: 2, description: 'Some miscellaneous task'},
-      {id: 2, missionId: 3, description: 'Some task about health'},
-      {id: 3, missionId: 3, description: 'Some task about health'}
+      {id: 0, missionId: 1, description: 'Some task about education', completed: false},
+      {id: 1, missionId: 2, description: 'Some miscellaneous task', completed: false},
+      {id: 2, missionId: 3, description: 'Some task about health', completed: false},
+      {id: 3, missionId: 3, description: 'Some task about health', completed: false}
     ], action) => {
   switch (action.type) {
     case 'ADD_TASK':
@@ -34,6 +34,12 @@ const tasks = (state = [
         ...state.slice(0, deleteTaskIndex),
         ...state.slice(deleteTaskIndex + 1)
       ]
+    case 'TOGGLE_TASK':
+      return state.map(
+        (task, i) => task.id === action.task_id ?
+          {...task, completed: !task.completed} :
+          task
+        )
     default:
       return state
   }

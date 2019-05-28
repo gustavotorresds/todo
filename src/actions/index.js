@@ -11,7 +11,8 @@ export const addTask = (text, missionId) => ({
   type: 'ADD_TASK',
   id: nextTaskId++,
   missionId: missionId,
-  description: text
+  description: text,
+  completed: false
 })
 
 export const updateTask = (taskId, newDescription) => ({
@@ -22,6 +23,11 @@ export const updateTask = (taskId, newDescription) => ({
 
 export const deleteTask = taskId => ({
   type: 'DELETE_TASK',
+  task_id: taskId
+})
+
+export const toggleTask = taskId => ({
+  type: 'TOGGLE_TASK',
   task_id: taskId
 })
 

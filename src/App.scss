@@ -17,7 +17,7 @@ body {
   margin: .5em .5em;
 }
 
-.Nav {
+/*.Nav {
   background-color: #ECF0F1;
   bottom: 0;
   padding: .8em 0;
@@ -28,7 +28,7 @@ body {
 .nav-icon {
   font-size: 1.5em;
   color: #707070;
-}
+}*/
 
 .items-container {
   display: flex;
@@ -119,6 +119,10 @@ body {
 
   input:focus{
       outline: none;
+  }
+
+  .completed {
+    text-decoration: line-through;
   }
 
   .checkbox-container {

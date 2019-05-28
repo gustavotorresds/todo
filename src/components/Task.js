@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateTask, deleteTask } from '../actions';
+import { updateTask, deleteTask, toggleTask } from '../actions';
 import Swipeout from 'rc-swipeout';
 import 'rc-swipeout/assets/index.css';
 
@@ -19,6 +19,11 @@ class Task extends Component {
 
   handleDone() {
     console.log('Done')
+  }
+
+  handleToggle() {
+    const task = this.props.task;
+    this.props.dispatch(toggleTask(task.id));
   }
 
   render() {
@@ -53,13 +58,13 @@ class Task extends Component {
 
             <div className="checkbox-container">
             <label className="checkbox-label">
-                <input type="checkbox"/>
+                <input type="checkbox" onChange={() => this.handleToggle()} checked={task.completed} />
                 <span className="checkbox-custom rectangular" style={{borderColor: mission.color}}></span>
             </label>
             </div>
 
             <input
-              className="description"
+              className={'description ' + (task.completed ? 'completed' : '')}
               value={task.description}
               onChange={(event) => this.handleChange(event)}
             />
