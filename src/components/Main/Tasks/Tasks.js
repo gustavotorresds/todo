@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import Task from './Task.js';
+import './Tasks.scss';
+
+import Task from './Task/Task';
 
 class Tasks extends Component {
   render() {

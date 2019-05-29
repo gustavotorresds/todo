@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { setMissionFilter } from '../actions'
+import { connect } from 'react-redux';
+
+import './Missions.scss';
+
+import { setMissionFilter } from '../../../actions'
 
 class Missions extends Component {
   handleClick(missionId) {
@@ -28,10 +31,6 @@ class Missions extends Component {
     return (
       <div className="missions-container">
         {missionElements}
-
-        <div className={'mission light-grey'}>
-          New
-        </div>
       </div>
     );
   }

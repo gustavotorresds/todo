@@ -6,7 +6,10 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import red from '@material-ui/core/colors/red';
 
 import { connect } from 'react-redux'
-import { addTask } from '../actions'
+
+import './Add.scss';
+
+import { addTask } from '../../../actions'
 
 const redTheme = createMuiTheme({ palette: { primary: red } });
 

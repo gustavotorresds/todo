@@ -12,6 +12,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 
+import './Nav.scss';
+
 class Nav extends Component {
   constructor(props) {
     super(props);

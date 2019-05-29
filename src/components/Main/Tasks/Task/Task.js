@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateTask, deleteTask, toggleTask } from '../actions';
 import Swipeout from 'rc-swipeout';
+
 import 'rc-swipeout/assets/index.css';
+import './Task.scss';
+
+import { updateTask, deleteTask, toggleTask } from '../../../../actions';
 
 class Task extends Component {
   handleChange(event) {

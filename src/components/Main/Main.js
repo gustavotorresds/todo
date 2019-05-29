@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Add from './Add.js';
-import Nav from './Nav.js';
-import Missions from './Missions.js';
-import Tasks from './Tasks.js';
+import Add from './Add/Add';
+import Nav from './Nav/Nav';
+import Missions from './Missions/Missions';
+import Tasks from './Tasks/Tasks';
 
 class Main extends Component {
   render() {
