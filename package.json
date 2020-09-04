@@ -6,7 +6,7 @@
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "i": "^0.3.6",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "npm": "^6.9.0",
     "rc-swipeout": "^2.0.11",
     "react": "^16.8.6",
